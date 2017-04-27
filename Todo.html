@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>IS218 Final</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<link rel = "stylesheet" type = "text/css" href= "style.css"/>
+<style type="text/css">
+body,td,th {
+	color: #443300;
+}
+body {
+	background-color: rgba(238,216,128,1);
+}
+</style>
+</head>
+
+<script >
+  function compare ()
+{
+var v1 = document.getElementById("password").value
+var v2 = document.getElementById("confirmPassword").value
+if (v1 != v2){
+document.getElementById("divCheckPasswordMatch").innerHTML = "Warning, Passwords don't match!"
+
+}
+else{
+document.getElementById("divCheckPasswordMatch").innerHTML = ""
+}
+
+var v3 = document.getElementById("password2").value
+var v4 = document.getElementById("confirmPassword2").value
+if (v3 != v4){
+document.getElementById("divCheckPasswordMatch2").innerHTML = "Warning, Passwords don't match!"
+
+}
+else{
+document.getElementById("divCheckPasswordMatch2").innerHTML = ""
+}
+
+}
+
+</script>
+
+<body style="margin-left: 246px; margin-right: 468px;">
+<span style="text-align: center"></span>
+<span style="text-align: center"></span>
+<span style="text-align: center"></span>
+<span style="text-align: center"></span>
+<span style="text-align: center">
+</span><span style="text-align: center"></span>
+<span style="text-align: center"></span>
+<p style="text-align: center; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace; color: #663900; font-style: inherit; font-weight: bold;"> Please select what you would like to do </p>
+
+ <span style="text-align: center"></span>
+<span style="text-align: center"></span>
+<span style="text-align: center">
+<input type =button name ="SignIn" id ="SignIn" value = "SignIn" 
+
+onclick ="document.getElementById('incident1').style.display='';document.getElementById('retrieve1').style.display='none';" />
+or  
+<input type =button name ="SignUp" id ="SignUp" value = "SignUp" 
+onClick ="document.getElementById('incident1').style.display='none';document.getElementById('retrieve1').style.display='';" />
+</span>
+<br>
+<div id="incident1" >
+   
+  <form  action = "form.php"  >
+
+<fieldset>
+<span style="text-align: center"></span>
+<p>
+
+  <legend><span style="text-align: center"></span> <span style="text-align: center"></span></legend>
+  <legend>Enter Username and Password</legend>
+</p>
+<ul>
+
+
+
+
+<li>
+ <form  action = "form.php"  >
+   <p>Retrieve to-do list for:<br>
+  <input  name="name"  type=text placeholder="Enter Username" id = "name"/> 
+   </p>
+   <input  name="pword"  type=text placeholder="Enter Password" id = "pword"/> 
+   </p>
+   <p>NAME
+     <label for = "email"> Request an email copy of data:</label>
+     <br/></li>
+     <input type = "radio" name = "eemail" value = "yes"/> yes
+    <input type = "radio" name = "eemail" value = "no"/> no</p>
+	
+   <p><br/>
+     <label for ="email">If yes, please provide  Email address:</label> 
+     </li>
+    </p>
+   <p>
+     <input type = "email" name = "email" id = "email"
+        placeholder = "Enter optional email address" 
+		maxlength ="70"/>
+   </p>
+   <p>
+     <input  type=submit    >
+     <br/>
+     <br/>
+   </p>
+ </form>
+
+</fieldset>
+</form>
+</div>
+<br/>
+
+
+
+
+<form  action = "form2.php"  >
+  <div id="retrieve1" style="display: none;">
+  <fieldset>
+  <legend>Enter Sign Up Information</legend>
+<ul>
+
+
+<li><label for = "email">Email:</label> </li>
+<input type = "text" name ="email" id = "email" required = "email" 
+       placeholder = "Enter Email" autocomplete = "off"
+	   maxlength ="70" /><br/><br/>
+
+	   
+<li><label for = "password">User Password:</label> </li>
+<input type = "password" name ="password" id = "password" required = "required" 
+       placeholder = "Enter password" autocomplete = "off"
+	   maxlength ="70" /><br/><br/>
+	   
+	     <li><label for = "gender">Confirm Password:</label> </li>
+<input type = "password" name ="password2" id = "password2" required = "required" 
+       placeholder = "Enter password" autocomplete = "off" onblur="compare();"
+	   maxlength ="70" /><br/><br/>
+
+
+<li><label for = "fname">First Name:</label> </li>
+<input type = "fname" name ="fname" id = "fname" required = "required" 
+       placeholder = "First Name" autocomplete = "off" onblur="compare();"
+	   maxlength ="70" /><br/><br/>
+	   
+<li><label for = "lname">Last Name:</label> </li>
+<input type = "lname" name ="lname" id = "lname" required = "required" 
+       placeholder = "Last Name" autocomplete = "off" onblur="compare();"
+	   maxlength ="70" /><br/><br/>
+	   
+
+	   <li><label for = "bday">Birthday:</label> </li>
+<input type = "bday" name ="bday" id = "bday" required = "required" 
+       placeholder = "yyyy/mm/dd" autocomplete = "off" onblur="compare();"
+	   maxlength ="70" /><br/><br/>
+	   
+	   	   <li><label for = "gender">Gender:</label> </li>
+<input type = "gender" name ="gender" id = "gender" required = "gender" 
+       placeholder = "Enter Gender" autocomplete = "off" onblur="compare();"
+	   maxlength ="70" /><br/><br/>
+	   
+	   <li><label for = "address">Phone Number:</label> </li>
+<input type = "number" name ="number" id = "number" required = "required" 
+       placeholder = "Enter Phone Number" autocomplete = "off" onblur="compare();"
+	   maxlength ="70" /><br/><br/>
+	   
+<div id ="divCheckPasswordMatch2"> </div>
+	   
+<input type = "submit"  value = "Submit"/>
+
+</ul>
+
+</form>
+</fieldset>
+</div>
+</body>
+</html>
